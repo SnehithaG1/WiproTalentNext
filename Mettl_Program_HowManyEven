@@ -1,0 +1,17 @@
+import java.io.*;
+import java.math.*;
+import java.util.*;
+
+class EvenOf5Numbers{
+public static void main(String[] args){
+int even=0;
+Scanner s = new Scanner(System.in);
+for(int i=0;i<5;i++){
+     int n = s.nextInt();
+     if(n%2==0){
+     even++;
+     }
+   }
+     System.out.println(even);
+     }
+}
