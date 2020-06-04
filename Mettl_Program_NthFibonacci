@@ -1,7 +1,7 @@
 import java.util.*;
 
-public class IsEven{
-	public static int we(int input1){
+public class NthFib{
+	public static int Fib(int input1){
 		int f=0,next=1;
 		int s=1;
 		if(input1==1){
@@ -18,7 +18,7 @@ public class IsEven{
 public static void main(String[] args){
     Scanner st = new Scanner(System.in);
 	int inp=st.nextInt();
-     System.out.println(we(inp));
+     System.out.println(Fib(inp));
      st.close();
 	
    }
