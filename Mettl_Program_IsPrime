@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class IsPrime{
+	
+public static void main(String[] args){
+     Scanner s = new Scanner(System.in);
+     int prime=1, count=0, i;
+     int input1=s.nextInt();
+     while (count < input1){
+			prime+=1;
+   for (i = 2; i <= prime; i++){
+     if (prime % i == 0) {
+       break;
+     }
+   }
+   if ( i == prime){
+     count = count+1;
+   }
+ }
+     System.out.println(prime);
+     s.close();
+}
+}
