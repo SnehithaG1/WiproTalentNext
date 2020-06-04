@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class EvenOdd{
+	
+public static void main(String[] args){
+     Scanner s = new Scanner(System.in);
+     int even=0,odd=0;
+     for(int i=0;i<5;i++) {
+    	 if(s.nextInt()%2==0) {
+    		 even++;
+    	 }
+    	 else {
+    		 odd++;
+    	 }
+     }
+     String str = s.next();
+     System.out.println((str.equals("even"))?even:odd);
+     s.close();
+}
+}
