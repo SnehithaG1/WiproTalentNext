@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Count{
+	public static int NonRepeatedDigits(int input1){
+		int a,count=0;
+		int [] arr = new int[10];
+		for(int i=0;i<10;i++){
+			arr[i]=0;
+		}
+		while(input1!=0){
+				a=input1%10;
+				input1/=10;
+				arr[a]+=1;
+
+		}
+		for(int b:arr){
+			if(b==1){
+				count++;
+			}
+		}
+		return count;
+
+}
+	
+public static void main(String[] args){
+    Scanner st = new Scanner(System.in);
+	  int inp=st.nextInt();
+    System.out.println(NonRepeatedDigits(inp));
+    st.close();
+	
+   }
