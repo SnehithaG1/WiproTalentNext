@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Palindrome{
+	public static int IsPalin(int input1){
+		int a=0,c,d=input1;
+		while(input1>0){
+			c=input1%10;
+			input1/=10;
+			a=a*10+c;
+			
+		}
+		if(a==d){
+			return 2;	
+				}
+		return 1;
+		
+	}
+	
+public static void main(String[] args){
+    Scanner st = new Scanner(System.in);
+    int inp=st.nextInt();
+    System.out.println(IsPalin(inp));
+    st.close();
+	
+   }
+}
