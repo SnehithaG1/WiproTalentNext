@@ -48,8 +48,8 @@ thousands position is maximum of all the digits in three numbers */
 public static void main(String[] args){
     Scanner st = new Scanner(System.in);
     int a=st.nextInt();
-    int b==st.nextInt();
-    int c==st.nextInt();
+    int b=st.nextInt();
+    int c=st.nextInt();
     System.out.println(CreatePin(a,b,c));
     st.close();
 	
