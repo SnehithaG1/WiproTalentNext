@@ -1,0 +1,57 @@
+import java.util.*;
+
+public class Pin{
+/* The Function generates a pin where
+units position  is least of units position of the three numbers
+tens position  is least of tens position of the three numbers
+hundreds position  is least of hundreds position of the three numbers
+thousands position is maximum of all the digits in three numbers */
+	public static int CreatePin(int input1, int input2, int input3){
+		int pin=0,a,i=0;
+		int [] arr=new int[9];
+		while(input1>0){
+			a=input1%10;
+		    arr[i]=a;
+			i++;
+			input1/=10;
+		}
+		while(input2>0){
+			a=input2%10;
+		    arr[i]=a;
+			i++;
+			input2/=10;
+		}
+		while(input3>0){
+			a=input3%10;
+		    arr[i]=a;
+			i++;
+			input3/=10;
+		}	
+		int max=0;
+		for(int k:arr){
+			if(k>max){
+				max=k;
+			}
+		}
+		pin=pin*10+max;
+		int min=0;
+		min=(arr[2]<((arr[5]<arr[8])?arr[5]:arr[8]))?arr[2]:(arr[5]<arr[8])?arr[5]:arr[8];
+		pin=pin*10+min;
+		min=(arr[1]<((arr[4]<arr[7])?arr[4]:arr[7]))?arr[1]:(arr[4]<arr[7])?arr[4]:arr[7];
+		pin=pin*10+min;
+		min=(arr[0]<((arr[3]<arr[6])?arr[3]:arr[6]))?arr[0]:(arr[3]<arr[6])?arr[3]:arr[6];
+		pin=pin*10+min;
+		return pin;
+		
+	}
+	
+public static void main(String[] args){
+    Scanner st = new Scanner(System.in);
+    int a=st.nextInt();
+    int b==st.nextInt();
+    int c==st.nextInt();
+    System.out.println(CreatePin(a,b,c));
+    st.close();
+	
+   }
+}
