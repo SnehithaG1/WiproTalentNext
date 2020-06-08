@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Palin{
+	public static int IsPalinStr(String input1){
+		int k=input1.length();
+		input1=input1.toLowerCase();
+		String str="";
+		for(int i=k-1;i>=0;i--){
+			str=str+input1.charAt(i);
+					}
+					if(str.equals(input1)){
+						return 2;
+					}
+					return 1;	
+	}
+	
+public static void main(String[] args){
+	Scanner sc= new Scanner(System.in); 
+	String str= sc.next();
+	System.out.println(IsPalinStr(str));
+  sc.close();
+	
+   }
+}
